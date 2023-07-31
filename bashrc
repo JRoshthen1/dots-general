@@ -34,7 +34,6 @@ alias week='date +%V'
 # Get a random number in range:
 #alias random='echo $(( $RANDOM % 20 + 1 ))'
 
-alias tpb='echo "http://piratebayo3klnzokct3wt5yyxb2vpebbuyjl7m623iaxmqhsd52coid.onion/"'
 
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update="sudo apt update && sudo apt list --upgradable && sudo apt upgrade && flatpak update"
@@ -43,8 +42,6 @@ alias zelda="cd ~/ && ./Games/yuzu-mainline-20230513-a0bf08807.AppImage &"
 
 #alias music="ncmpc"
 
-
-#This command will first create a list of all the files in the current directory that end with .ogg. Then, it will loop through the list and convert each file to MP3, while preserving the metadata. The output file will have the same name as the input file, but with the .ogg extension replaced with .mp3.
 
 #!/bin/bash
 #for file in *.ogg; do
