@@ -16,11 +16,10 @@ alias lsa="lsd -hal --group-directories-first" #ls command with colors and nerdf
 alias ls="lsd --group-directories-first" #ls command with colors and nerdfont icons
 alias nscan="sudo nmap -sn 192.168.1.* && echo ' ' && echo 'For more information: sudo nmap -A 192.168.1.*'"
 alias pscan="nmap -p-"
-alias ytdl="yt-dlp -f 'ba' -x --audio-format m4a"
-#alias taskui="taskwarrior-tui" #task and taskwarior-tui for todo-list vriations
+alias ytdl="yt-dlp -f 'ba' -x --audio-format mp3"
+
 #xdiskusage = #windirstat like app
 
-alias vim="~/bin/nvim/bin/nvim"
 alias raspi02="ssh jrosh@192.168.1.2"
 
 
@@ -33,22 +32,20 @@ alias rss="canto-curses"
 alias week='date +%V'
 # Get a random number in range:
 #alias random='echo $(( $RANDOM % 20 + 1 ))'
-
+alias mc="java -jar ~/Documents/TLauncher-2.885.jar"
 
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update="sudo apt update && sudo apt list --upgradable && sudo apt upgrade && flatpak update"
 alias maintenance="sudo apt autoremove && sudo apt autoclean"
 alias zelda="cd ~/ && ./Games/yuzu-mainline-20230513-a0bf08807.AppImage &"
 
-#alias music="ncmpc"
 
+# Android SDK envs
+export ANDROID_HOME=$HOME/Android
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-#!/bin/bash
-#for file in *.ogg; do
-#    ffmpeg -i "$file" -c:a libmp3lame -map_metadata 0:s:a:0 "${file%.ogg}.mp3"
-#done
-
-#!/bin/bash# Colours have names too. Stolen from Arch wiki
+# Colours have names too. Stolen from Arch wiki
 txtblk='\[\e[0;30m\]' # Black - Regular
 txtred='\[\e[0;31m\]' # Red
 txtgrn='\[\e[0;32m\]' # Green
@@ -88,9 +85,8 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-
 # Minimalist style with current working directory and Git branch
-
 export PS1='\[\033[0;36m\]\w\[\033[0;33m\]$(parse_git_branch)\[\033[00m\] $ '
+# ~/Projects/dashmaster (main) $ 
 
 
